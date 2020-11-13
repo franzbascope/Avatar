@@ -1,9 +1,10 @@
 import React from "react";
+import { GiPerson } from "react-icons/gi";
 
 export default () => {
   return (
     <div>
-      <h1>Hola Mundo</h1>
+      <GiPerson color="red" fontSize="525px"></GiPerson>
     </div>
   );
 };
