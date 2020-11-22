@@ -1,6 +1,6 @@
 import React from "react";
-import { Gi3DHammer } from "react-icons/gi";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default ({ item }) => {
-  return <Gi3DHammer />;
+  return <FontAwesomeIcon icon={["fab", "github"]} />;
 };

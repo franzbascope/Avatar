@@ -1,7 +1,6 @@
 import React from "react";
 import { accessories } from "./accesories";
 import { Accordion, Card, Button } from "react-bootstrap";
-import { IconContext } from "react-icons";
 import IconItem from "./iconItem";
 
 export default () => {
