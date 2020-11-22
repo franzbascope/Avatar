@@ -1,36 +1,18 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChild } from "@fortawesome/free-solid-svg-icons";
-import { useDrop } from "react-dnd";
+import { bodyConfig } from "../../conf/bodyConfig";
+import BodyItem from "./bodyItem";
 
 export default () => {
-  const [child, setChild] = useState(null);
-  const [{ isOver }, drop] = useDrop({
-    accept: "accessory",
-    drop: (item, monitor) => setChild(item.icon),
-    collect: (monitor) => ({
-      isOver: !!monitor.isOver(),
-    }),
+  return bodyConfig.map((mappedItem, index) => {
+    return <BodyItem item={mappedItem} key={index} />;
+    // const ConstructItems = (bodyItem, key) => {
+    //   if (bodyItem.items) {
+    //     return (
+    //       <BodyItem key={key}>{bodyItem.items.map(ConstructItems)}</BodyItem>
+    //     );
+    //   } else {
+    //     return <BodyItem key={key} bodyItem={bodyItem} />;
+    //   }
+    // };
+    // return <BodyItem bodyItem={bodyItem} />;
   });
-  return (
-    <span ref={drop} className="fa-stack" style={{ display: "contents" }}>
-      <FontAwesomeIcon
-        icon={faChild}
-        style={{ fontSize: "450px", opacity: "0.5" }}
-        className="fa-stack-1x"
-      />
-      {child ? (
-        <FontAwesomeIcon
-          onDoubleClick={() => {
-            setChild(null);
-          }}
-          icon={["fab", child]}
-          style={{ color: "black", fontSize: "50px" }}
-          className="fa-stack-1x"
-        />
-      ) : (
-        ""
-      )}
-    </span>
-  );
 };

@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChild } from "@fortawesome/free-solid-svg-icons";
 import { useDrop } from "react-dnd";
 
-export default (props) => {
-  const { item } = props;
+export default () => {
   const [child, setChild] = useState(null);
-  const [{}, drop] = useDrop({
-    accept: item.type ? item.type : "accessory",
+  const [{ isOver }, drop] = useDrop({
+    accept: "accessory",
     drop: (item, monitor) => setChild(item.icon),
+    collect: (monitor) => ({
+      isOver: !!monitor.isOver(),
+    }),
   });
-
   return (
     <span ref={drop} className="fa-stack" style={{ display: "contents" }}>
       <FontAwesomeIcon
-        icon={["fab", item.icon]}
+        icon={faChild}
         style={{ fontSize: "450px", opacity: "0.5" }}
         className="fa-stack-1x"
       />

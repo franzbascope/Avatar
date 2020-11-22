@@ -2,9 +2,9 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDrag } from "react-dnd";
 
-export default ({ icon }) => {
+export default ({ icon, type }) => {
   const [{ isDragging }, drag] = useDrag({
-    item: { type: "accessory", icon },
+    item: { type: type ? type : "", icon },
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
