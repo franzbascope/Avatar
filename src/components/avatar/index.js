@@ -4,8 +4,12 @@ import { faChild } from "@fortawesome/free-solid-svg-icons";
 import { useDrop } from "react-dnd";
 
 export default () => {
-  const [collectedProps, drop] = useDrop({
-    accept: "",
+  const [{ isOver }, drop] = useDrop({
+    accept: "accessory",
+    drop: () => alert("Hola Mundo"),
+    collect: (monitor) => ({
+      isOver: !!monitor.isOver(),
+    }),
   });
   return (
     <span ref={drop}>

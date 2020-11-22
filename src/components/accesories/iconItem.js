@@ -4,7 +4,7 @@ import { useDrag } from "react-dnd";
 
 export default ({ icon }) => {
   const [{ isDragging }, drag] = useDrag({
-    item: { type: JSON.stringify(icon) },
+    item: { type: "accessory" },
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
