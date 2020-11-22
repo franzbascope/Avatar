@@ -16,8 +16,8 @@ export default () => {
           </Card.Header>
           <Accordion.Collapse eventKey={index}>
             <Card.Body>
-              {accessory.items.map((item) => {
-                return <IconItem item={item} />;
+              {accessory.items.map((icon) => {
+                return <IconItem icon />;
               })}
             </Card.Body>
           </Accordion.Collapse>

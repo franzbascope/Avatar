@@ -2,9 +2,24 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDrag } from "react-dnd";
 
-export default ({ item }) => {
-  const [collectedProps, drag] = useDrag({
-    item: { type: "test" },
+export default ({ icon }) => {
+  const [{ isDragging }, drag] = useDrag({
+    item: { type: JSON.stringify(icon) },
+    collect: (monitor) => ({
+      isDragging: !!monitor.isDragging(),
+    }),
   });
-  return <FontAwesomeIcon ref={drag} icon={["fab", "github"]} />;
+  return (
+    <span
+      ref={drag}
+      style={{
+        opacity: isDragging ? 0.5 : 1,
+        fontSize: 25,
+        fontWeight: "bold",
+        cursor: "move",
+      }}
+    >
+      <FontAwesomeIcon icon={["fab", "github"]} />
+    </span>
+  );
 };
