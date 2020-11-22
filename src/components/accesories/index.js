@@ -7,7 +7,7 @@ export default () => {
   return accessories.map((accessory, iterator) => {
     const index = iterator + 1;
     return (
-      <Accordion defaultActiveKey={index}>
+      <Accordion defaultActiveKey={index} key={iterator}>
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey={index}>
@@ -16,8 +16,8 @@ export default () => {
           </Card.Header>
           <Accordion.Collapse eventKey={index}>
             <Card.Body>
-              {accessory.items.map((icon) => {
-                return <IconItem icon />;
+              {accessory.items.map((icon, key) => {
+                return <IconItem icon key={key} />;
               })}
             </Card.Body>
           </Accordion.Collapse>

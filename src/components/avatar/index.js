@@ -8,6 +8,8 @@ export default () => {
     accept: "",
   });
   return (
-    <FontAwesomeIcon ref={drop} icon={faChild} style={{ fontSize: "245" }} />
+    <span ref={drop}>
+      <FontAwesomeIcon icon={faChild} style={{ fontSize: "245" }} />
+    </span>
   );
 };
