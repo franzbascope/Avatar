@@ -1,10 +1,13 @@
 import React from "react";
-import { GiPerson } from "react-icons/gi";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChild } from "@fortawesome/free-solid-svg-icons";
+import { useDrop } from "react-dnd";
 
 export default () => {
+  const [collectedProps, drop] = useDrop({
+    accept: "",
+  });
   return (
-    <div>
-      <GiPerson color="red" fontSize="525px"></GiPerson>
-    </div>
+    <FontAwesomeIcon ref={drop} icon={faChild} style={{ fontSize: "245" }} />
   );
 };

@@ -7,7 +7,13 @@ export default () => {
   return (
     <Card>
       <Row>
-        <Col>
+        <Col
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <Avatar />
         </Col>
         <Col>
