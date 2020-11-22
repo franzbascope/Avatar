@@ -2,7 +2,7 @@ export const accessories = [
   {
     name: "head",
     items: [
-      "GiBrutalHelm",
+      "github",
       "GiNinjaHead",
       "GiWitchFace",
       "GiAstronautHelmet",

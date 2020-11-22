@@ -4,7 +4,7 @@ import { useDrag } from "react-dnd";
 
 export default ({ icon }) => {
   const [{ isDragging }, drag] = useDrag({
-    item: { type: "accessory" },
+    item: { type: "accessory", icon },
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
@@ -19,7 +19,7 @@ export default ({ icon }) => {
         cursor: "move",
       }}
     >
-      <FontAwesomeIcon icon={["fab", "github"]} />
+      <FontAwesomeIcon icon={["fab", icon]} />
     </span>
   );
 };
