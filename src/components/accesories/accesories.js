@@ -1,3 +1,4 @@
+import Types from "../../conf/types";
 export const accessories = [
   {
     name: "head",
@@ -16,7 +17,7 @@ export const accessories = [
     items: ["github", "github", "github", "github", "github", "github"],
   },
   {
-    name: "bottom",
+    name: Types.pants,
     items: [
       "github",
       "github",
@@ -29,7 +30,7 @@ export const accessories = [
     ],
   },
   {
-    name: "logos",
+    name: Types.logos,
     items: [
       "github",
       "github",
@@ -37,7 +38,7 @@ export const accessories = [
       "github",
       "github",
       "github",
-      "github",
+      "github ",
     ],
   },
 ];

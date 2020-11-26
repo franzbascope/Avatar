@@ -2,26 +2,26 @@ import Types from "./types";
 
 export const bodyConfig = [
   {
-    icon: "github",
+    icon: "apple",
     type: Types.head,
     mustExist: true,
     items: [],
   },
   {
-    icon: "body",
+    icon: "microsoft",
     type: Types.body,
     mustExist: true,
     items: [],
   },
   {
-    icon: "legs",
+    icon: "google",
     type: Types.pants,
     mustExist: true,
     items: [],
   },
   {
-    icon: "arms",
-    type: Types.arms,
+    icon: "github",
+    type: Types.logos,
     mustExist: true,
     items: [],
   },
