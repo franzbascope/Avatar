@@ -14,7 +14,7 @@ setGlobal({
   },
   avatars: [],
   users: [],
-  currentPage: "new",
+  currentPage: "index",
 });
 
 ReactDOM.render(

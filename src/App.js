@@ -13,11 +13,7 @@ library.add(fab);
 function App() {
   const [currentPage, setCurrentPage] = useGlobal("currentPage");
   return (
-    <Layout>
-      <DndProvider backend={HTML5Backend}>
-        {currentPage === "new" ? <NewAvatar /> : <AvtarList />}
-      </DndProvider>
-    </Layout>
+    <Layout>{currentPage === "new" ? <NewAvatar /> : <AvtarList />}</Layout>
   );
 }
 
