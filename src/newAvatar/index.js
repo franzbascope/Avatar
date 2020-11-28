@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useGlobal } from "reactn";
 import { Card, Row, Col } from "react-bootstrap";
 import Avatar from "../components/avatar";
 import Accessories from "../components/accesories/index";
 
 export default () => {
+  const [avatar, setAvatars] = useGlobal("currentAvatar");
   return (
     <Card>
       <Row>
         <Col>
           <h4 style={{ textAlign: "center" }}>Avatar</h4>
-          <Avatar />
+          <Avatar avatar={avatar} showAvatarForm={true} />
         </Col>
         <Col>
           <h4>Accessories</h4>

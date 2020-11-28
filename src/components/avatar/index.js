@@ -1,18 +1,15 @@
-import React, { useGlobal } from "reactn";
 import { Card } from "react-bootstrap";
 import Head from "./head";
 import Types from "../../conf/types";
 import DragItem from "./dragItem";
 import AvatarFrom from "./avatarForm";
 
-export default () => {
-  const [avatar, setAvatars] = useGlobal("currentAvatar");
-
+export default (props) => {
+  const { avatar, showAvatarForm } = props;
   return (
     <div>
       <Card style={{ margin: "20px", padding: "20px", height: "250px" }}>
         <Card.Body style={{ position: "relative", margin: "auto" }}>
-          {" "}
           <DragItem
             image={avatar.hairs}
             type={Types.hairs}
@@ -36,11 +33,15 @@ export default () => {
           />
         </Card.Body>
       </Card>
-      <Card style={{ margin: "20px", padding: "20px" }}>
-        <Card.Body>
-          <AvatarFrom />
-        </Card.Body>
-      </Card>
+      {showAvatarForm ? (
+        <Card style={{ margin: "20px", padding: "20px" }}>
+          <Card.Body>
+            <AvatarFrom />
+          </Card.Body>
+        </Card>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

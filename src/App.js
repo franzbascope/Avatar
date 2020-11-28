@@ -1,7 +1,8 @@
 import { useGlobal } from "reactn";
 import Layout from "./layout";
 import "bootstrap/dist/css/bootstrap.css";
-import MainPage from "./mainPage";
+import NewAvatar from "./newAvatar";
+import AvtarList from "./avatarList";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { DndProvider } from "react-dnd";
@@ -14,7 +15,7 @@ function App() {
   return (
     <Layout>
       <DndProvider backend={HTML5Backend}>
-        {currentPage === "new" ? <MainPage /> : <h1>index</h1>}
+        {currentPage === "new" ? <NewAvatar /> : <AvtarList />}
       </DndProvider>
     </Layout>
   );
