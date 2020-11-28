@@ -5,22 +5,23 @@ export default ({ eyesImage, mouthImage }) => {
   return (
     <div
       style={{
-        marginLeft: "20px",
+        marginTop: "15px",
+        marginLeft: "39px",
         backgroundColor: "#ffdbb5",
         borderRadius: "100%",
-        width: "140px",
-        height: "110px",
+        width: "100px",
+        height: "100px",
       }}
     >
       <DragItem
         image={eyesImage}
         type={Types.eyes}
-        style={{ height: "160px", position: "absolute", top: 0 }}
+        style={{ height: "160px", position: "absolute", top: 4, right: 6 }}
       />
       <DragItem
         image={mouthImage}
         type={Types.mouth}
-        style={{ height: "160px", position: "absolute", top: 0 }}
+        style={{ height: "160px", position: "absolute", top: 4, right: 6 }}
       />
     </div>
   );

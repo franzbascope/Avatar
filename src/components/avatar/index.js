@@ -14,7 +14,7 @@ export default () => {
         <DragItem
           image={avatar.hairs}
           type={Types.hairs}
-          style={{ height: "160px", position: "absolute", top: 0 }}
+          style={{ height: "160px", position: "absolute", top: 10, right: 12 }}
         />
         <Head eyesImage={avatar.eyes} mouthImage={avatar.mouth} />
         <DragItem
