@@ -9,8 +9,8 @@ import Pants from "../../images/bottoms/bottom1.jpg";
 
 export default () => {
   return (
-    <Card style={{ margin: "20px" }}>
-      <Card.Body style={{ position: "relative" }}>
+    <Card style={{ margin: "20px", padding: "20px", height: "250px" }}>
+      <Card.Body style={{ position: "relative", margin: "auto" }}>
         {" "}
         <img
           src={Hat}
