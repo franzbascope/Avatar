@@ -7,6 +7,7 @@ export default () => {
     userName: "",
     avatarName: "",
   });
+  const [currentPage, setCurrentPage] = useGlobal("currentPage");
   const [validated, setValidated] = useState(false);
   const [currentAvatar, setCurrentAvatar] = useGlobal("currentAvatar");
   const [avatars, setAvatars] = useGlobal("avatars");
@@ -35,6 +36,12 @@ export default () => {
       }
       saveUser(avatarForm);
       saveAvatar(avatarForm, currentAvatar);
+      setAvatarForm({
+        password: "",
+        userName: "",
+        avatarName: "",
+      });
+      setCurrentPage("index");
     }
   };
 
