@@ -8,7 +8,15 @@ export default () => {
       <div className="col-md-4">
         <Avatar avatar={avatar.items} showAvatarForm={false} height={350}>
           <Card>
-            <Card.Body>This is some text within a card body.</Card.Body>
+            <Card.Body>
+              <Card.Title>Author: {avatar.userName}</Card.Title>
+              <Card.Subtitle className="mb-2 text-muted">
+                {avatar.avatarName}
+              </Card.Subtitle>
+              <Card.Link href="#">Use</Card.Link>
+              <Card.Link href="#">Edit</Card.Link>
+              <Card.Link href="#">Delete</Card.Link>
+            </Card.Body>
           </Card>
         </Avatar>
       </div>

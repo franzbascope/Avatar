@@ -46,13 +46,12 @@ export default () => {
   };
 
   const saveUser = (avatarForm) => {
-    delete avatarForm.avatarName;
     setUsers(users.concat(avatarForm));
   };
 
   const saveAvatar = (avatarForm, currentAvatar) => {
     delete avatarForm.password;
-    let newAvatar = { user: avatarForm, items: currentAvatar };
+    let newAvatar = { ...avatarForm, items: currentAvatar };
     setAvatars(avatars.concat(newAvatar));
   };
 
