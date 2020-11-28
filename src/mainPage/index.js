@@ -7,13 +7,8 @@ export default () => {
   return (
     <Card>
       <Row>
-        <Col
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+        <Col>
+          <h4 style={{ textAlign: "center" }}>Avatar</h4>
           <Avatar />
         </Col>
         <Col>
