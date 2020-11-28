@@ -26,6 +26,6 @@ export const accessories = [
   },
   {
     name: Types.bottoms,
-    items: ["bottom1.jpg", "bottom2.jpg", "bottom3.jpg"],
+    items: ["bottoms1.jpg", "bottoms2.jpg", "bottoms3.jpg"],
   },
 ];

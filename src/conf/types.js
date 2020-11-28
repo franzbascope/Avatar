@@ -1,4 +1,4 @@
-const mouth = "mouths";
+const mouth = "mouth";
 const eyes = "eyes";
 const hairs = "hairs";
 const body = "body";

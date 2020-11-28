@@ -14,12 +14,12 @@ export default () => {
           style={{ height: "160px", position: "absolute", top: 0 }}
         />
         <Head />
-        <img
-          src={`${process.env.PUBLIC_URL}/${Types.body}/body1.jpg`}
+        <DragItem
+          type={Types.body}
           style={{ width: "180px", position: "absolute", top: "-30px" }}
         />
-        <img
-          src={`${process.env.PUBLIC_URL}/${Types.bottoms}/bottom1.jpg`}
+        <DragItem
+          type={Types.bottoms}
           style={{ width: "180px", position: "absolute", top: "-68px" }}
         />
       </Card.Body>
