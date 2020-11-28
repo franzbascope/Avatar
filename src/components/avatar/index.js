@@ -5,10 +5,13 @@ import DragItem from "./dragItem";
 import AvatarFrom from "./avatarForm";
 
 export default (props) => {
-  const { avatar, showAvatarForm } = props;
+  const { avatar, showAvatarForm, height } = props;
   return (
     <div>
-      <Card style={{ margin: "20px", padding: "20px", height: "250px" }}>
+      <Card
+        style={{ margin: "20px", padding: "20px", minHeight: `${height}px` }}
+      >
+        {props.children}
         <Card.Body style={{ position: "relative", margin: "auto" }}>
           <DragItem
             image={avatar.hairs}

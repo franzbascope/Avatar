@@ -10,7 +10,7 @@ export default () => {
       <Row>
         <Col>
           <h4 style={{ textAlign: "center" }}>Avatar</h4>
-          <Avatar avatar={avatar} showAvatarForm={true} />
+          <Avatar avatar={avatar} showAvatarForm={true} height={250} />
         </Col>
         <Col>
           <h4>Accessories</h4>

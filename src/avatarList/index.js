@@ -6,7 +6,7 @@ export default () => {
   return avatars.map((avatar) => {
     return (
       <div className="col-md-4">
-        <Avatar avatar={avatar.items} showAvatarForm={false}>
+        <Avatar avatar={avatar.items} showAvatarForm={false} height={350}>
           <Card>
             <Card.Body>This is some text within a card body.</Card.Body>
           </Card>
