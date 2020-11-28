@@ -6,7 +6,15 @@ export const accessories = [
   },
   {
     name: Types.hairs,
-    items: ["hair1.jpg", "hair2.jpg"],
+    items: [
+      "hair1.jpg",
+      "hair2.jpg",
+      "hair3.jpg",
+      "hair4.jpg",
+      "hair5.jpg",
+      "hair6.jpg",
+      "hair7.jpg",
+    ],
   },
   {
     name: Types.mouth,

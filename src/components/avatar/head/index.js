@@ -1,5 +1,4 @@
-import Eye from "../../../images/eyes/eyes1.jpg";
-import Mouth from "../../../images/mouths/mouth1.jpg";
+import Types from "../../../conf/types";
 
 export default () => {
   return (
@@ -12,13 +11,12 @@ export default () => {
         height: "110px",
       }}
     >
-      {" "}
       <img
-        src={Eye}
+        src={`${process.env.PUBLIC_URL}/${Types.eyes}/eyes1.jpg`}
         style={{ height: "160px", position: "absolute", top: 0 }}
       />
       <img
-        src={Mouth}
+        src={`${process.env.PUBLIC_URL}/${Types.mouth}/mouth1.jpg`}
         style={{ height: "160px", position: "absolute", top: 0 }}
       />
     </div>

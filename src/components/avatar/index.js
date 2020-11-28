@@ -1,11 +1,5 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import { bodyConfig } from "../../conf/bodyConfig";
-import { Row, Col } from "react-bootstrap";
-import BodyItem from "./bodyItem";
-import Hat from "../../images/peinados/hair1.jpg";
-import Body from "../../images/body/body1.jpg";
-import Pants from "../../images/bottoms/bottom1.jpg";
 import Head from "./head";
 import Types from "../../conf/types";
 
