@@ -57,7 +57,7 @@ export default () => {
 
   const avatarNameExists = (avatarForm) => {
     return avatars.find((avatar) => {
-      return avatar.name === avatarForm.name;
+      return avatar.name === avatarForm.avatarName;
     });
   };
 

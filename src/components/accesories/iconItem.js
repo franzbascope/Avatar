@@ -8,7 +8,7 @@ export default ({ imageName, type }) => {
         setAvatar({ ...avatar, [type]: imageName });
       }}
       style={{
-        opacity: 0.5,
+        opacity: 1,
         fontSize: 25,
         fontWeight: "bold",
         cursor: "pointer",
