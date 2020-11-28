@@ -1,11 +1,7 @@
-const head = "head";
+const mouth = "mouths";
 const eyes = "eyes";
-const hat = "hat";
+const hairs = "hairs";
 const body = "body";
-const pants = "pants";
-const shoes = "shoes";
-const arm = "arm";
-const weapon = "weapon";
-const logos = "logos";
+const bottoms = "bottoms";
 
-export default { head, eyes, hat, body, pants, shoes, arm, weapon, logos };
+export default { mouth, eyes, hairs, body, bottoms };
