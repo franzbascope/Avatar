@@ -7,13 +7,13 @@ export const accessories = [
   {
     name: Types.hairs,
     items: [
-      "hair1.jpg",
-      "hair2.jpg",
-      "hair3.jpg",
-      "hair4.jpg",
-      "hair5.jpg",
-      "hair6.jpg",
-      "hair7.jpg",
+      "hairs1.jpg",
+      "hairs2.jpg",
+      "hairs3.jpg",
+      "hairs4.jpg",
+      "hairs5.jpg",
+      "hairs6.jpg",
+      "hairs7.jpg",
     ],
   },
   {
