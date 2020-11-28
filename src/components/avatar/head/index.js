@@ -1,7 +1,7 @@
 import Types from "../../../conf/types";
 import DragItem from "../dragItem";
 
-export default () => {
+export default ({ eyesImage, mouthImage }) => {
   return (
     <div
       style={{
@@ -13,10 +13,12 @@ export default () => {
       }}
     >
       <DragItem
+        image={eyesImage}
         type={Types.eyes}
         style={{ height: "160px", position: "absolute", top: 0 }}
       />
       <DragItem
+        image={mouthImage}
         type={Types.mouth}
         style={{ height: "160px", position: "absolute", top: 0 }}
       />

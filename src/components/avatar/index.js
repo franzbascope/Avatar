@@ -1,24 +1,29 @@
-import React from "react";
+import React, { useGlobal } from "reactn";
 import { Card } from "react-bootstrap";
 import Head from "./head";
 import Types from "../../conf/types";
 import DragItem from "./dragItem";
 
 export default () => {
+  const [avatar, setAvatars] = useGlobal("currentAvatar");
+
   return (
     <Card style={{ margin: "20px", padding: "20px", height: "250px" }}>
       <Card.Body style={{ position: "relative", margin: "auto" }}>
         {" "}
         <DragItem
+          image={avatar.hairs}
           type={Types.hairs}
           style={{ height: "160px", position: "absolute", top: 0 }}
         />
-        <Head />
+        <Head eyesImage={avatar.eyes} mouthImage={avatar.mouth} />
         <DragItem
+          image={avatar.body}
           type={Types.body}
           style={{ width: "180px", position: "absolute", top: "-30px" }}
         />
         <DragItem
+          image={avatar.bottoms}
           type={Types.bottoms}
           style={{ width: "180px", position: "absolute", top: "-68px" }}
         />
