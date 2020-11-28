@@ -1,10 +1,9 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDrag } from "react-dnd";
 
-export default ({ icon, type }) => {
+export default ({ imageName, type }) => {
   const [{ isDragging }, drag] = useDrag({
-    item: { type: type ? type : "", icon },
+    item: { type: type ? type : "", imageName },
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
@@ -19,7 +18,11 @@ export default ({ icon, type }) => {
         cursor: "move",
       }}
     >
-      <FontAwesomeIcon icon={["fab", icon]} />
+      <img
+        style={{ width: "100px" }}
+        src={`${process.env.PUBLIC_URL}/${type}/${imageName}`}
+        alt="accessory"
+      />
     </span>
   );
 };

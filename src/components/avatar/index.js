@@ -7,6 +7,7 @@ import Hat from "../../images/peinados/hair1.jpg";
 import Body from "../../images/body/body1.jpg";
 import Pants from "../../images/bottoms/bottom1.jpg";
 import Head from "./head";
+import Types from "../../conf/types";
 
 export default () => {
   return (
@@ -14,16 +15,16 @@ export default () => {
       <Card.Body style={{ position: "relative", margin: "auto" }}>
         {" "}
         <img
-          src={Hat}
+          src={`${process.env.PUBLIC_URL}/${Types.hairs}/hair1.jpg`}
           style={{ height: "160px", position: "absolute", top: 0 }}
         />
         <Head />
         <img
-          src={Body}
+          src={`${process.env.PUBLIC_URL}/${Types.body}/body1.jpg`}
           style={{ width: "180px", position: "absolute", top: "-30px" }}
         />
         <img
-          src={Pants}
+          src={`${process.env.PUBLIC_URL}/${Types.bottoms}/bottom1.jpg`}
           style={{ width: "180px", position: "absolute", top: "-68px" }}
         />
       </Card.Body>
