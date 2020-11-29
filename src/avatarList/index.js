@@ -4,6 +4,8 @@ import Avatar from "../components/avatar";
 import Confirmation from "../components/confirmation";
 export default () => {
   const [avatars, setAvatars] = useGlobal("avatars");
+  const [currentAvatar, setCurrentAvatar] = useGlobal("currentAvatar");
+  const [currentPage, setCurrentPage] = useGlobal("currentPage");
   const [state, setState] = useState({
     showConfirmation: false,
     userName: "",
@@ -17,6 +19,11 @@ export default () => {
       userName: userName,
       behavior: "delete",
     });
+  };
+
+  const useAvatar = (items) => {
+    setCurrentAvatar(items);
+    setCurrentPage("new");
   };
 
   return (
@@ -48,8 +55,14 @@ export default () => {
               <Avatar avatar={avatar.items} showAvatarForm={false} height={350}>
                 <Card>
                   <Card.Body>
-                    <Card.Link href="#">Use</Card.Link>
-                    <Card.Link href="#">Edit</Card.Link>
+                    <Card.Link
+                      href="#"
+                      onClick={() => {
+                        useAvatar(avatar.items);
+                      }}
+                    >
+                      Use
+                    </Card.Link>
                     <Card.Link
                       href="#"
                       onClick={() => {
