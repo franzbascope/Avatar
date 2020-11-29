@@ -60,11 +60,11 @@ export default () => {
       avatarName: "",
     });
     setCurrentAvatar({
-      body: "body1.jpg",
-      bottoms: "bottoms1.jpg",
-      eyes: "eyes1.jpg",
-      hairs: "hairs3.jpg",
-      mouth: "mouth1.jpg",
+      body: "body1.png",
+      bottoms: "bottoms1.png",
+      eyes: "eyes1.png",
+      hairs: "hairs3.png",
+      mouth: "mouth1.png",
     });
   };
 
