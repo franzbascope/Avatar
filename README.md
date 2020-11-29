@@ -8,7 +8,7 @@ El proyecto lo pudes encontrar en la siguiente pagina: https://franzbascope.gith
 
 ### Video de explicacion
 
-La explicacion del proyecto esta en el siguiente enlace:
+La explicacion del proyecto esta en el siguiente enlace: https://youtu.be/Lec3h2j0V6Y
 
 ### Extra Info
 
