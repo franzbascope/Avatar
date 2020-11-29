@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useGlobal } from "reactn";
 import { Form, Button, Col } from "react-bootstrap";
+import avatar from "..";
 export default () => {
   const [avatarForm, setAvatarForm] = useState({
     password: "",
@@ -26,22 +27,33 @@ export default () => {
       event.stopPropagation();
       return;
     } else {
-      if (userExists(avatarForm)) {
-        alert("User already exists, try a differnt userName");
+      if (areCredentialsCorrect(avatarForm)) {
+        if (avatarNameExists(avatarForm)) {
+          alert("Avatar Name already exists");
+          return;
+        }
+        saveAvatar(avatarForm, currentAvatar);
+        setAvatarForm({
+          password: "",
+          userName: "",
+          avatarName: "",
+        });
+        setCurrentPage("index");
+        return;
+      } else {
+        if (userExists(avatarForm)) {
+          alert("User already exists, try a differnt userName");
+          return;
+        }
+        if (avatarNameExists(avatarForm)) {
+          alert("Avatar Name already exists");
+          return;
+        }
+        saveUser(avatarForm);
+        saveAvatar(avatarForm, currentAvatar);
+        setCurrentPage("index");
         return;
       }
-      if (avatarNameExists(avatarForm)) {
-        alert("Avatar Name already exists");
-        return;
-      }
-      saveUser(avatarForm);
-      saveAvatar(avatarForm, currentAvatar);
-      setAvatarForm({
-        password: "",
-        userName: "",
-        avatarName: "",
-      });
-      setCurrentPage("index");
     }
   };
 
@@ -63,6 +75,15 @@ export default () => {
   const avatarNameExists = (avatarForm) => {
     return avatars.find((avatar) => {
       return avatar.name === avatarForm.avatarName;
+    });
+  };
+
+  const areCredentialsCorrect = (avatarForm) => {
+    return users.find((user) => {
+      return (
+        user.userName === avatarForm.userName &&
+        user.password === avatarForm.password
+      );
     });
   };
 
