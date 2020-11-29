@@ -10,14 +10,17 @@ export default () => {
     showConfirmation: false,
     userName: "",
     behavior: "",
+    avatarName: "",
   });
 
-  const deleteAvatar = (userName) => {
+  const deleteAvatar = (avatar) => {
+    const { avatarName, userName } = avatar;
     setState({
       ...state,
       showConfirmation: true,
       userName: userName,
       behavior: "delete",
+      avatarName: avatarName,
     });
   };
 
@@ -32,7 +35,7 @@ export default () => {
         deleteAvatar={() => {
           setAvatars(
             avatars.filter((avatar) => {
-              return avatar.userName != state.userName;
+              return avatar.avatarName != state.avatarName;
             })
           );
           setState({
@@ -66,7 +69,7 @@ export default () => {
                     <Card.Link
                       href="#"
                       onClick={() => {
-                        deleteAvatar(avatar.userName);
+                        deleteAvatar(avatar);
                       }}
                     >
                       Delete
