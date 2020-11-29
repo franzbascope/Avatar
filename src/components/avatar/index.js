@@ -7,7 +7,7 @@ import AvatarFrom from "./avatarForm";
 export default (props) => {
   const { avatar, showAvatarForm, height } = props;
   return (
-    <div>
+    <div style={{ position: "sticky", top: 10 }}>
       <Card
         style={{ margin: "20px", padding: "20px", minHeight: `${height}px` }}
       >
