@@ -32,12 +32,7 @@ export default () => {
           alert("Avatar Name already exists");
           return;
         }
-        saveAvatar(avatarForm, currentAvatar);
-        setAvatarForm({
-          password: "",
-          userName: "",
-          avatarName: "",
-        });
+        saveAvatarToState();
         setCurrentPage("index");
         return;
       } else {
@@ -50,11 +45,27 @@ export default () => {
           return;
         }
         saveUser(avatarForm);
-        saveAvatar(avatarForm, currentAvatar);
+        saveAvatarToState();
         setCurrentPage("index");
         return;
       }
     }
+  };
+
+  const saveAvatarToState = () => {
+    saveAvatar(avatarForm, currentAvatar);
+    setAvatarForm({
+      password: "",
+      userName: "",
+      avatarName: "",
+    });
+    setCurrentAvatar({
+      body: "body1.jpg",
+      bottoms: "bottoms1.jpg",
+      eyes: "eyes1.jpg",
+      hairs: "hairs3.jpg",
+      mouth: "mouth1.jpg",
+    });
   };
 
   const saveUser = (avatarForm) => {

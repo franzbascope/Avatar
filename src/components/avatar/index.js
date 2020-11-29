@@ -22,7 +22,7 @@ export default (props) => {
               top: 10,
               right: 12,
             }}
-          />
+          ></DragItem>
           <Head eyesImage={avatar.eyes} mouthImage={avatar.mouth} />
           <DragItem
             image={avatar.body}
