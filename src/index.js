@@ -9,7 +9,7 @@ setGlobal({
     body: "body1.png",
     bottoms: "bottoms1.png",
     eyes: "eyes1.png",
-    hairs: "hairs3.png",
+    hairs: "hairs2.png",
     mouth: "mouth1.png",
   },
   avatars: [],
