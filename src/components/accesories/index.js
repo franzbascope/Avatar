@@ -15,7 +15,7 @@ export default () => {
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey={index}>
-            <Card.Body style={{ height: "170px" }}>
+            <Card.Body>
               {accessory.items.map((imageName, key) => {
                 return (
                   <IconItem

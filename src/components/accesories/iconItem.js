@@ -3,22 +3,16 @@ import React, { useGlobal } from "reactn";
 export default ({ imageName, type }) => {
   const [avatar, setAvatar] = useGlobal("currentAvatar");
   return (
-    <span
+    <img
       onDoubleClick={() => {
         setAvatar({ ...avatar, [type]: imageName });
       }}
       style={{
-        opacity: 1,
-        fontSize: 25,
-        fontWeight: "bold",
+        height: "100px",
         cursor: "pointer",
       }}
-    >
-      <img
-        style={{ width: "100px" }}
-        src={`${process.env.PUBLIC_URL}/${type}/${imageName}`}
-        alt="accessory"
-      />
-    </span>
+      src={`${process.env.PUBLIC_URL}/${type}/${imageName}`}
+      alt="accessory"
+    />
   );
 };
