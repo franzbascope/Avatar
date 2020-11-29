@@ -6,7 +6,7 @@ export default ({ eyesImage, mouthImage }) => {
     <div
       style={{
         marginTop: "15px",
-        marginLeft: "39px",
+        marginLeft: "41px",
         backgroundColor: "#ffdbb5",
         borderRadius: "100%",
         width: "90px",
@@ -16,12 +16,12 @@ export default ({ eyesImage, mouthImage }) => {
       <DragItem
         image={eyesImage}
         type={Types.eyes}
-        style={{ height: "140px", position: "absolute", top: 17, right: 15 }}
+        style={{ height: "250px", position: "absolute", top: -40, right: -35 }}
       />
       <DragItem
         image={mouthImage}
         type={Types.mouth}
-        style={{ height: "140px", position: "absolute", top: 17, right: 15 }}
+        style={{ height: "250px", position: "absolute", top: -40, right: -35 }}
       />
     </div>
   );

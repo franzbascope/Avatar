@@ -14,27 +14,32 @@ export default (props) => {
         {props.children}
         <Card.Body style={{ margin: "auto", position: "relative" }}>
           <DragItem
-            style={{ width: "100px", position: "absolute", right: 14, top: 20 }}
+            style={{
+              width: "200px",
+              position: "absolute",
+              right: -37,
+              top: -40,
+            }}
             image={avatar.hairs}
             type={Types.hairs}
           ></DragItem>
           <Head eyesImage={avatar.eyes} mouthImage={avatar.mouth} />
           <DragItem
             style={{
-              width: "120px",
+              width: "250px",
               position: "absolute",
-              top: 0,
-              left: 45,
+              top: -70,
+              left: -18,
             }}
             image={avatar.body}
             type={Types.body}
           />
           <DragItem
             style={{
-              width: "120px",
+              width: "270px",
               position: "absolute",
-              top: 0,
-              left: 45,
+              top: -89,
+              left: -28,
             }}
             image={avatar.bottoms}
             type={Types.bottoms}

@@ -8,7 +8,7 @@ export default ({ imageName, type }) => {
         setAvatar({ ...avatar, [type]: imageName });
       }}
       style={{
-        height: "100px",
+        width: "150px",
         cursor: "pointer",
       }}
       src={`${process.env.PUBLIC_URL}/${type}/${imageName}`}
