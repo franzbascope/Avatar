@@ -46,7 +46,12 @@ export default () => {
   };
 
   const saveUser = (avatarForm) => {
-    setUsers(users.concat(avatarForm));
+    setUsers(
+      users.concat({
+        userName: avatarForm.userName,
+        password: avatarForm.password,
+      })
+    );
   };
 
   const saveAvatar = (avatarForm, currentAvatar) => {

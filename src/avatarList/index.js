@@ -1,29 +1,74 @@
-import { useGlobal } from "reactn";
+import React, { useGlobal, useState } from "reactn";
 import { Card, Row, Col } from "react-bootstrap";
 import Avatar from "../components/avatar";
+import Confirmation from "../components/confirmation";
 export default () => {
   const [avatars, setAvatars] = useGlobal("avatars");
+  const [state, setState] = useState({
+    showConfirmation: false,
+    userName: "",
+    behavior: "",
+  });
+
+  const deleteAvatar = (userName) => {
+    setState({
+      ...state,
+      showConfirmation: true,
+      userName: userName,
+      behavior: "delete",
+    });
+  };
+
   return (
-    <Row>
-      {avatars.map((avatar) => {
-        return (
-          <Col md="4">
-            <Avatar avatar={avatar.items} showAvatarForm={false} height={350}>
-              <Card>
-                <Card.Body>
-                  <Card.Title>Author: {avatar.userName}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
-                    {avatar.avatarName}
-                  </Card.Subtitle>
-                  <Card.Link href="#">Use</Card.Link>
-                  <Card.Link href="#">Edit</Card.Link>
-                  <Card.Link href="#">Delete</Card.Link>
-                </Card.Body>
-              </Card>
-            </Avatar>
-          </Col>
-        );
-      })}
-    </Row>
+    <React.Fragment>
+      <Confirmation
+        deleteAvatar={() => {
+          setAvatars(
+            avatars.filter((avatar) => {
+              return avatar.userName != state.userName;
+            })
+          );
+          setState({
+            showConfirmation: false,
+            userName: "",
+            behavior: "",
+          });
+        }}
+        userName={state.userName}
+        behavior={state.behavior}
+        show={state.showConfirmation}
+        handleClose={() => {
+          setState({ ...state, showConfirmation: false });
+        }}
+      />
+      <Row>
+        {avatars.map((avatar) => {
+          return (
+            <Col md="4">
+              <Avatar avatar={avatar.items} showAvatarForm={false} height={350}>
+                <Card>
+                  <Card.Body>
+                    <Card.Link href="#">Use</Card.Link>
+                    <Card.Link href="#">Edit</Card.Link>
+                    <Card.Link
+                      href="#"
+                      onClick={() => {
+                        deleteAvatar(avatar.userName);
+                      }}
+                    >
+                      Delete
+                    </Card.Link>
+                    <Card.Title>Author: {avatar.userName}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">
+                      {avatar.avatarName}
+                    </Card.Subtitle>
+                  </Card.Body>
+                </Card>
+              </Avatar>
+            </Col>
+          );
+        })}
+      </Row>
+    </React.Fragment>
   );
 };
